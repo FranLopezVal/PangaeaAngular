@@ -1,0 +1,7 @@
+<button (click)="addComponent('struct')">Add DataWidget</button>
+<dynamic-component #dynamicComponent [hidden]="true" ></dynamic-component>  
+
+<node *ngFor="let item of elements">
+    <ng-container *view="item"></ng-container>
+</node>
+<app-data-struct></app-data-struct>

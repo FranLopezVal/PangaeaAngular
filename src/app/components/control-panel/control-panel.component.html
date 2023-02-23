@@ -1,0 +1,81 @@
+<head>
+    <title>{{title}}</title>
+    <script>/* off-canvas sidebar toggle */
+      const btnToggle = document.querySelector('.toggle-btn');
+
+    btnToggle.addEventListener('click', function () {
+    document.getElementById('sidebar').classList.toggle('active');
+    });
+      </script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" @click="" href="#">Pangaea</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor02">
+        <ul class="navbar-nav me-auto">
+          
+          <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            Menu
+          </button>
+        </ul>
+        <form class="d-flex  form-control-sm">
+          <input class="form-control me-sm-3 w25 form-control-sm" type="search" placeholder="Client">
+          <button class="btn btn-secondary my-2 w25 my-sm-0 btn-sm" type="submit">Find</button>
+        </form>
+      </div>
+    </div>
+</nav>
+
+<div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h4>
+    <h6>Proyecto: Nombre</h6>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <hr class="border border-danger border-2 opacity-50">
+    <div class="d-flex justify-content-center
+     btn-group-vertical" role="group" aria-label="Vertical button group">
+     
+      <button type="button" class="btn btn-primary btn-sm">Gestionar Capitulos</button>
+      <button type="button" class="btn btn-primary btn-sm">Gestionar Jerarquia</button>
+      <button type="button" class="btn btn-primary btn-sm">Metadata</button>
+      <button type="button" class="btn btn-primary btn-sm">Imagenes y referencias</button>
+      
+    </div>  
+
+    <div class="card m-2">
+      <h6 class="card-header">Mundo:</h6>
+      <div class="btn-group p-2" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-info btn-sm">Region</button>
+        <button type="button" class="btn btn-warning btn-sm">Reino</button>
+        <button type="button" class="btn btn-secondary btn-sm">Comarca</button>
+        <button type="button" class="btn btn-secondary btn-sm">Ciudad</button>
+        <button type="button" class="btn btn-secondary btn-sm">Pueblo</button>
+      </div>
+    </div>
+    <div class="card m-2">
+      <h6 class="card-header">Personajes:</h6>
+      <div class="btn-group p-2" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-success btn-sm">Principales</button>
+        <button type="button" class="btn btn-secondary btn-sm">Secundarios</button>
+        <button type="button" class="btn btn-secondary btn-sm">Trama</button>
+      </div>
+    </div>
+  </div>
+</div>
+ 
+  <div class="containter mt-5">
+    <div class="col-lg-10  offset-lg-1">
+      
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+ 
