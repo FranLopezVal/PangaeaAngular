@@ -1,0 +1,13 @@
+{
+    "users" : [
+        {
+            "id" : 1,
+            "name": "fran",
+            "work": "programmer"
+        },
+        {
+            "id" : 2,
+            "name": "fran",
+            "work": "programmer2"
+        }          
+]}
